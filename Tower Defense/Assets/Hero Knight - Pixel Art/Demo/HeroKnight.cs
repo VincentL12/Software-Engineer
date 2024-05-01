@@ -25,6 +25,10 @@ public class HeroKnight : MonoBehaviour {
     private float               m_delayToIdle = 0.0f;
     private float               m_rollDuration = 8.0f / 14.0f;
     private float               m_rollCurrentTime;
+    public Transform AttackPoint;
+    public float attackRange = 0.5f;
+    public LayerMask enemylayers;
+
 
 
     // Use this for initialization
@@ -111,6 +115,8 @@ public class HeroKnight : MonoBehaviour {
         {
             m_currentAttack++;
 
+            Attack();
+
             // Loop back to one after third attack
             if (m_currentAttack > 3)
                 m_currentAttack = 1;
@@ -125,6 +131,8 @@ public class HeroKnight : MonoBehaviour {
             // Reset timer
             m_timeSinceAttack = 0.0f;
         }
+
+
 
         // Block
         else if (Input.GetMouseButtonDown(1) && !m_rolling)
@@ -191,5 +199,25 @@ public class HeroKnight : MonoBehaviour {
             // Turn arrow in correct direction
             dust.transform.localScale = new Vector3(m_facingDirection, 1, 1);
         }
+    }
+
+    void Attack()
+    {
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(AttackPoint.position, attackRange, enemylayers);
+
+        foreach(Collider2D enemy in hitEnemies)
+        {
+            Debug.Log("Hit" + enemy.name);
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (AttackPoint == null)
+        {
+            return;
+        }
+
+        Gizmos.DrawWireSphere(AttackPoint.position, attackRange);
     }
 }

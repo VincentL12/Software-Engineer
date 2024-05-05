@@ -25,10 +25,10 @@ public class HeroKnight : MonoBehaviour {
     private float               m_delayToIdle = 0.0f;
     private float               m_rollDuration = 8.0f / 14.0f;
     private float               m_rollCurrentTime;
-    public Transform AttackPoint;
+    public Transform AttackPointL;
     public float attackRange = 0.5f;
     public LayerMask enemylayers;
-
+    public int attackDamage = 40;
 
 
     // Use this for initialization
@@ -77,14 +77,12 @@ public class HeroKnight : MonoBehaviour {
         // Swap direction of sprite depending on walk direction
         if (inputX > 0)
         {
-            GetComponent<SpriteRenderer>().flipX = false;
-            m_facingDirection = 1;
+            transform.localScale = new Vector2(1, 1);
         }
             
         else if (inputX < 0)
         {
-            GetComponent<SpriteRenderer>().flipX = true;
-            m_facingDirection = -1;
+            transform.localScale = new Vector2(-1, 1);
         }
 
         // Move
@@ -203,21 +201,24 @@ public class HeroKnight : MonoBehaviour {
 
     void Attack()
     {
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(AttackPoint.position, attackRange, enemylayers);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(AttackPointL.position, attackRange, enemylayers);
 
         foreach(Collider2D enemy in hitEnemies)
         {
-            Debug.Log("Hit" + enemy.name);
+            enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
         }
     }
 
+
+
     private void OnDrawGizmosSelected()
     {
-        if (AttackPoint == null)
+        if (AttackPointL == null)
         {
             return;
         }
 
-        Gizmos.DrawWireSphere(AttackPoint.position, attackRange);
+        Gizmos.DrawWireSphere(AttackPointL.position, attackRange);
     }
+
 }

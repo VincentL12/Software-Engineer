@@ -3216,6 +3216,7 @@ GameObject:
   - component: {fileID: 212259381618824826}
   - component: {fileID: 50512961361659082}
   - component: {fileID: 61252361919625272}
+  - component: {fileID: 212259381618824827}
   m_Layer: 6
   m_Name: LightBandit
   m_TagString: Untagged
@@ -3492,6 +3493,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &212259381618824827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689867600323598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 482d2e8c3a4d1084789d49cc6ec1cc9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 95346456547803396}
+  maxHealth: 100
 --- !u!4 &351674195547430535
 Transform:
   m_ObjectHideFlags: 0
@@ -3912,7 +3927,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3398970590493499925}
   m_Layer: 0
-  m_Name: AttackPoint
+  m_Name: AttackPointL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3972,9 +3987,9 @@ Transform:
   m_GameObject: {fileID: 6323719954669289060}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.02, y: -5.83, z: 0}
+  m_LocalPosition: {x: -6.93, y: -5.83, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2900218874194680748}
   - {fileID: 4393510861836381639}
@@ -4064,11 +4079,12 @@ MonoBehaviour:
   m_rollForce: 6
   m_noBlood: 0
   m_slideDust: {fileID: 1038168246061390451, guid: 8b8c8cc6774fb074cb9139cc631b108e, type: 3}
-  AttackPoint: {fileID: 3398970590493499925}
-  attackRange: 0.39
+  AttackPointL: {fileID: 3398970590493499925}
+  attackRange: 0.5
   enemylayers:
     serializedVersion: 2
     m_Bits: 192
+  attackDamage: 40
 --- !u!61 &9117128349794071410
 BoxCollider2D:
   m_ObjectHideFlags: 0

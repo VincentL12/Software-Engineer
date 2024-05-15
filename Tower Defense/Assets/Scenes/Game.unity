@@ -924,10 +924,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefabs: {fileID: 466751157591192689, guid: aaf7639b6689b68479739f72601efc68, type: 3}
-  baseEnemies: 8
-  enemiesPerSecond: 0.5
-  timeBetweenWaves: 5
-  difficultyscalingfactor: 0.75
+  baseEnemies: 3
+  enemiesPerSecond: 1
+  timeBetweenWaves: 20
+  difficultyscalingfactor: 1
 --- !u!1 &281895656
 GameObject:
   m_ObjectHideFlags: 0
@@ -3686,10 +3686,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefabs: {fileID: 7665605664870635287, guid: 5b838f59c7d5cb843b33b33d6666c529, type: 3}
-  baseEnemies: 8
-  enemiesPerSecond: 0.5
-  timeBetweenWaves: 5
-  difficultyscalingfactor: 0.75
+  baseEnemies: 3
+  enemiesPerSecond: 1
+  timeBetweenWaves: 20
+  difficultyscalingfactor: 1
 --- !u!4 &978251025
 Transform:
   m_ObjectHideFlags: 0

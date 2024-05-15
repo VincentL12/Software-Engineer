@@ -11,6 +11,7 @@ public class Attack : MonoBehaviour
         if (collision.gameObject.GetComponent<TowerHealth>())
         {
             collision.gameObject.GetComponent<TowerHealth>().health -= damage;
+            Wave.onEnemyDestroy.Invoke();
             Destroy(gameObject);
         }
     }

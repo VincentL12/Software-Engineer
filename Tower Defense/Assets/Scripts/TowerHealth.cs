@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System.Security.Cryptography.X509Certificates;
 
 public class TowerHealth : MonoBehaviour
 {
     public int health;
     public int maxhealth = 50;
     public Slider slider;
+    public GameObject GameOver;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +25,8 @@ public class TowerHealth : MonoBehaviour
         if(health <= 0)
         {
             Destroy(gameObject);
+            GameOver.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 }

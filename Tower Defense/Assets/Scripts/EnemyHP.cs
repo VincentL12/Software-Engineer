@@ -26,6 +26,7 @@ public class Enemy : MonoBehaviour
     }
     void Die()
     {
+        Score.scoreValue += 10;
         Wave.onEnemyDestroy.Invoke();
         animator.SetBool("Dead",true);
         GetComponent<Collider2D>().enabled = false;

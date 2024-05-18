@@ -315,4 +315,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyl: {fileID: 5852866316402388583}
   animatorl: {fileID: 4250418361781998109}
-  speedl: 2
+  speedl: 1

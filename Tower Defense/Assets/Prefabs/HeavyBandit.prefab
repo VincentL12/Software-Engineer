@@ -225,7 +225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1462780583347606650}
   animator: {fileID: 1501139751987591793}
-  speed: 5
+  speed: 1
 --- !u!1 &6053386592565575473
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Security.Cryptography.X509Certificates;
 
 public class HeroKnight : MonoBehaviour {
 
-    [SerializeField] float      m_speed = 4.0f;
+    public static float      m_speed = 4.0f;
     [SerializeField] float      m_jumpForce = 7.5f;
     [SerializeField] float      m_rollForce = 6.0f;
     [SerializeField] bool       m_noBlood = false;
@@ -28,9 +29,8 @@ public class HeroKnight : MonoBehaviour {
     public Transform AttackPointL;
     public float attackRange = 0.5f;
     public LayerMask enemylayers;
-    public int attackDamage = 40;
+    public static int attackDamage = 40;
     public GameObject footstep;
-
 
 
     // Use this for initialization

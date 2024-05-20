@@ -59,6 +59,7 @@ public class Wave : MonoBehaviour
         timeSinceLastSpawn = 0f;
         currentWave++;
         StartCoroutine(StartWave());
+        Enemy.maxHealth += 2;
     }
 
     private void EnemyDestroyed()

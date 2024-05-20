@@ -11,6 +11,7 @@ public class TowerHealth : MonoBehaviour
     public int maxhealth = 50;
     public Slider slider;
     public GameObject GameOver;
+    public static int heal;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +28,12 @@ public class TowerHealth : MonoBehaviour
             Destroy(gameObject);
             GameOver.SetActive(true);
             Time.timeScale = 0f;
+        }
+
+        if(heal == 20)
+        {
+            health += 20;
+            heal = 0;
         }
     }
 }

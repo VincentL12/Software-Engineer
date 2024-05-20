@@ -7,8 +7,8 @@ using UnityEngine.Windows;
 public class Enemy : MonoBehaviour
 {
     public Animator animator;
-    public int maxHealth = 100;
-    int currentHealth;
+    static public int maxHealth = 100;
+    public int currentHealth;
     void Start()
     {
         currentHealth = maxHealth;
@@ -26,6 +26,7 @@ public class Enemy : MonoBehaviour
     }
     void Die()
     {
+        Score.exp += 1;
         Score.scoreValue += 10;
         Wave.onEnemyDestroy.Invoke();
         animator.SetBool("Dead",true);

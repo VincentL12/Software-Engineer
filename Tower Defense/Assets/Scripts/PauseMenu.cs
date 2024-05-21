@@ -41,11 +41,15 @@ public class PauseMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Game");
         Time.timeScale = 1f;
+        Score.exp = 0;
+        Score.scoreValue = 0;
     }
 
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1f;
+        Score.exp = 0;
+        Score.scoreValue = 0;
     }
 }

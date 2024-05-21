@@ -47,7 +47,7 @@ public class Wave : MonoBehaviour
             timeSinceLastSpawn = 0f;
         }
 
-        if (enemiesAlive == 0 && enemiesLeftToSpawn == 0)
+        if (enemiesAlive <= 0 && enemiesLeftToSpawn <= 0)
         {
             EndWave();
         }

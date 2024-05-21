@@ -32,5 +32,7 @@ public class Enemy : MonoBehaviour
         animator.SetBool("Dead",true);
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
+        FindObjectOfType<AudioManager>().Play("Hurt");
+        Destroy(gameObject);
     }
 }

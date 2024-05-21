@@ -9469,6 +9469,16 @@ MonoBehaviour:
     pitch: 1
     name: Unpause
     source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: f11db4559b3ffff45b62e9327fc5535d, type: 3}
+    volume: 1
+    pitch: 1
+    name: Dash
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 566d2ea6240b489479a6e9fd608c2621, type: 3}
+    volume: 1
+    pitch: 1
+    name: Hurt
+    source: {fileID: 0}
 --- !u!1 &2043331477
 GameObject:
   m_ObjectHideFlags: 0

@@ -31,6 +31,10 @@ public class HeroKnight : MonoBehaviour {
     public LayerMask enemylayers;
     public static int attackDamage = 40;
     public GameObject footstep;
+    public GameObject prefabs;
+    public Transform firepoint;
+    private bool left;
+    private bool right;
 
 
     // Use this for initialization
@@ -91,6 +95,8 @@ public class HeroKnight : MonoBehaviour {
                 footstep.SetActive(false);
             }
             transform.localScale = new Vector2(1, 1);
+            right = true;
+            left = false;
         }
             
         else if (inputX < 0)
@@ -104,6 +110,9 @@ public class HeroKnight : MonoBehaviour {
                 footstep.SetActive(false);
             }
             transform.localScale = new Vector2(-1, 1);
+            right = false;
+            left = true;
+
         }
         else
         {
@@ -151,10 +160,14 @@ public class HeroKnight : MonoBehaviour {
         // Roll
         else if (Input.GetKeyDown("left shift") && !m_rolling && !m_isWallSliding)
         {
+            m_currentAttack++;
+            if (m_currentAttack > 3)
+            {
+                m_currentAttack = 1;
+            }
             FindObjectOfType<AudioManager>().Play("Dash");
-            m_rolling = true;
-            m_animator.SetTrigger("Roll");
-            m_body2d.velocity = new Vector2(m_facingDirection * m_rollForce, m_body2d.velocity.y);
+            m_animator.SetTrigger("Attack" + m_currentAttack);
+            shoot();
         }
             
 
@@ -229,6 +242,18 @@ public class HeroKnight : MonoBehaviour {
         }
 
         Gizmos.DrawWireSphere(AttackPointL.position, attackRange);
+    }
+
+    void shoot()
+    {
+        if (right == true && left == false)
+        {
+            Instantiate(prefabs, AttackPointL.position, AttackPointL.rotation);
+        }
+        else if(left == true && right == false) 
+        { 
+            Instantiate(prefabs, firepoint.position, firepoint.rotation);
+        }
     }
 
 }

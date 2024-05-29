@@ -4682,6 +4682,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1158108651}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &1017741897
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1017741898}
+  m_Layer: 3
+  m_Name: Firepoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1017741898
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017741897}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -0.329, y: 0.81, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8413529788963598899}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1027567100
 GameObject:
   m_ObjectHideFlags: 0
@@ -6556,7 +6587,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.32741308, y: -9.329753}
+  m_Offset: {x: 0.42317033, y: -9.42551}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6567,7 +6598,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.649764, y: 1.208849}
+  m_Size: {x: 3.8563447, y: 1.017334}
   m_EdgeRadius: 0
 --- !u!1 &1381980461
 GameObject:
@@ -10284,6 +10315,7 @@ Transform:
   - {fileID: 3233824456799291063}
   - {fileID: 3398970590493499925}
   - {fileID: 269324601}
+  - {fileID: 1017741898}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8631832244542143965
@@ -10371,6 +10403,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 192
   footstep: {fileID: 269324599}
+  prefabs: {fileID: 8393647962307230235, guid: 26a26ac0d335185429829256a044c9a2, type: 3}
+  firepoint: {fileID: 1017741898}
 --- !u!61 &9117128349794071410
 BoxCollider2D:
   m_ObjectHideFlags: 0

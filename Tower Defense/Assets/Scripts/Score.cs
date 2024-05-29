@@ -11,6 +11,7 @@ public class Score : MonoBehaviour
     public static int expreq = 6;
     public GameObject buff;
     private TextMeshProUGUI Scores;
+
     // Start is called before the first frame update
     void Start()
     {

@@ -10405,6 +10405,8 @@ MonoBehaviour:
   footstep: {fileID: 269324599}
   prefabs: {fileID: 8393647962307230235, guid: 26a26ac0d335185429829256a044c9a2, type: 3}
   firepoint: {fileID: 1017741898}
+  Cooldown: 2
+  done: 0
 --- !u!61 &9117128349794071410
 BoxCollider2D:
   m_ObjectHideFlags: 0

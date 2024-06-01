@@ -18,11 +18,12 @@ public class Wave : MonoBehaviour
     public static UnityEvent onEnemyDestroy = new UnityEvent();
 
 
-    private int currentWave = 1;
+    public static int currentWave = 1;
     private float timeSinceLastSpawn;
     private int enemiesAlive;
     private int enemiesLeftToSpawn;
     private bool isSpawning = false;
+    public static int flag = 0;
 
     private void Awake()
     {
@@ -76,6 +77,7 @@ public class Wave : MonoBehaviour
         yield return new WaitForSeconds(timeBetweenWaves);
         isSpawning = true;
         enemiesLeftToSpawn = EnemiesPerWave();
+        flag++;
     }
 
     private int EnemiesPerWave()

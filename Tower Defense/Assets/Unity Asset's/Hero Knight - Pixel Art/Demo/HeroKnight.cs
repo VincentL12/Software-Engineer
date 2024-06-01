@@ -35,6 +35,8 @@ public class HeroKnight : MonoBehaviour {
     public Transform firepoint;
     private bool left;
     private bool right;
+    public float Cooldown = 2;
+    public float done = 0;
 
 
     // Use this for initialization
@@ -157,19 +159,21 @@ public class HeroKnight : MonoBehaviour {
         else if (Input.GetMouseButtonUp(1))
             m_animator.SetBool("IdleBlock", false);
 
-        // Roll
-        else if (Input.GetKeyDown("left shift") && !m_rolling && !m_isWallSliding)
+        if (Time.time > done)
         {
-            m_currentAttack++;
-            if (m_currentAttack > 3)
+            if (Input.GetKeyDown("left shift") && !m_rolling && !m_isWallSliding)
             {
-                m_currentAttack = 1;
+                m_currentAttack++;
+                if (m_currentAttack > 3)
+                {
+                    m_currentAttack = 1;
+                }
+                FindObjectOfType<AudioManager>().Play("Dash");
+                m_animator.SetTrigger("Attack" + m_currentAttack);
+                shoot();
+                done = Time.time + Cooldown;
             }
-            FindObjectOfType<AudioManager>().Play("Dash");
-            m_animator.SetTrigger("Attack" + m_currentAttack);
-            shoot();
         }
-            
 
         //Jump
         else if (Input.GetKeyDown("space") && m_grounded && !m_rolling)
@@ -194,8 +198,8 @@ public class HeroKnight : MonoBehaviour {
         {
             // Prevents flickering transitions to idle
             m_delayToIdle -= Time.deltaTime;
-                if(m_delayToIdle < 0)
-                    m_animator.SetInteger("AnimState", 0);
+            if (m_delayToIdle < 0)
+                m_animator.SetInteger("AnimState", 0);
         }
     }
 

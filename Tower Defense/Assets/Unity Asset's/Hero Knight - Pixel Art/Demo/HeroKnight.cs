@@ -159,9 +159,9 @@ public class HeroKnight : MonoBehaviour {
         else if (Input.GetMouseButtonUp(1))
             m_animator.SetBool("IdleBlock", false);
 
-        if (Time.time > done)
-        {
-            if (Input.GetKeyDown("left shift") && !m_rolling && !m_isWallSliding)
+        else if (Input.GetKeyDown("left shift") && !m_rolling && !m_isWallSliding)
+            {
+            if (Time.time > done)
             {
                 m_currentAttack++;
                 if (m_currentAttack > 3)

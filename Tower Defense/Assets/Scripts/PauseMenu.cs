@@ -43,6 +43,9 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         Score.exp = 0;
         Score.scoreValue = 0;
+        HeroKnight.attackDamage = 40;
+        Wave.currentWave = 1;
+        Score.expreq = 6;
     }
 
     public void MainMenu()

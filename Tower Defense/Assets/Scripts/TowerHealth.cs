@@ -30,9 +30,9 @@ public class TowerHealth : MonoBehaviour
             Time.timeScale = 0f;
         }
 
-        if(heal == 20)
+        if(heal == 100)
         {
-            health += 20;
+            health += 100;
             heal = 0;
         }
     }

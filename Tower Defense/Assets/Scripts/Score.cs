@@ -31,8 +31,9 @@ public class Score : MonoBehaviour
 
     void lvlup()
     {
+        Time.timeScale = 0f;
         buff.SetActive(true);
         exp = 0;
-        expreq = expreq + 2;
+        expreq = expreq + 4;
     }
 }

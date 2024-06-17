@@ -44,6 +44,7 @@ public class PauseMenu : MonoBehaviour
         Score.exp = 0;
         Score.scoreValue = 0;
         HeroKnight.attackDamage = 40;
+        HeroKnight.m_speed = 4.0f;
         Wave.currentWave = 1;
         Score.expreq = 6;
     }
@@ -54,5 +55,11 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         Score.exp = 0;
         Score.scoreValue = 0;
+        Score.exp = 0;
+        Score.scoreValue = 0;
+        HeroKnight.attackDamage = 40;
+        HeroKnight.m_speed = 4.0f;
+        Wave.currentWave = 1;
+        Score.expreq = 6;
     }
 }

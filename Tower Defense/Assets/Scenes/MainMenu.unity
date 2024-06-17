@@ -1121,11 +1121,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '1.Click to initiate attack
+  m_text: '1.RMB To Melee
 
     2.Space to Jump
 
-    3.Shift to Slide
+    3.Shift To Range Attack
 
     4.Protect
     the caravan

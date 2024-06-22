@@ -33,7 +33,7 @@ Upcoming Fitur:
 - Add more playable class (patch V1.2)
 
 Jika ada masalah atau bug bisa hubungi email berikut:
->vincent2d_@hotmail.com
+>vincent_@gmail.com
 
 Terima Kasih
 

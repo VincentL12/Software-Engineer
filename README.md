@@ -25,6 +25,9 @@ Control:
 - Defend the Caravan
 - Esc to pause
 
+Our Upcoming And Present Progress:
+![image](https://github.com/VincentL12/Software-Engineer/assets/165641063/971822e5-c77a-437b-89df-6be562eaaafd)
+
 Fitur:
 - Musuh semakin sulit setiap wave
 - player akan diberikan buff setiap wave selesai
@@ -33,6 +36,13 @@ Fitur:
   - movement speed increase
   - heal increase
 
+Upcoming Fitur:
+- Add new Enemy (patch V1.1)
+- Add more playable class (patch V1.2)
+
+Fitur To Be Announced Soon:
+- Add ads
+- Add Economy System
 
 Jika ada masalah atau bug bisa hubungi email berikut:
 >vincent2d_@hotmail.com

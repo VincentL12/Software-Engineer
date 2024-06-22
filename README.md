@@ -12,11 +12,6 @@ Anda dapat mendownload game kami di link ini:
 Preview:
 ![image](https://github.com/VincentL12/Software-Engineer/assets/165641063/731bb07c-ebab-4a92-8b46-539498cbbe4b)
 
-Gameplay Video:
-
-
-https://github.com/VincentL12/Software-Engineer/assets/165641063/b0dec84f-cfec-4332-9cb2-7ccac728f3e3
-
 Control:
 - wasd to move character
 - space to jump
@@ -24,9 +19,6 @@ Control:
 - shift to range attack
 - Defend the Caravan
 - Esc to pause
-
-Our Upcoming And Present Progress:
-![image](https://github.com/VincentL12/Software-Engineer/assets/165641063/971822e5-c77a-437b-89df-6be562eaaafd)
 
 Fitur:
 - Musuh semakin sulit setiap wave

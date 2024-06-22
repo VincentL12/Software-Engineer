@@ -32,10 +32,6 @@ Upcoming Fitur:
 - Add new Enemy (patch V1.1)
 - Add more playable class (patch V1.2)
 
-Fitur To Be Announced Soon:
-- Add ads
-- Add Economy System
-
 Jika ada masalah atau bug bisa hubungi email berikut:
 >vincent2d_@hotmail.com
 
